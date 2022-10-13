@@ -62,7 +62,7 @@ public class Television extends Appliance {
 	@Override
 	public void PlugOut() {
 		super.setIsPluggedIn(false);
-		System.out.println("The Televisio is plugged out.");
+		System.out.println("The Television is plugged out.");
 	}
 	@Override
 	public void TurnOn() {

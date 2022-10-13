@@ -30,7 +30,7 @@ public class Main {
 		System.out.println("3) Wall");
 		System.out.println("4) Ceiling");
 		System.out.println("5) Clip");
-		System.out.print("Enter your input: ");	
+		System.out.print("\nEnter your input: ");	
 		int typeElectricFan =  Integer.parseInt(in.readLine());
 		
 	
@@ -53,5 +53,7 @@ public class Main {
 			objElectricFan.setFanType(objElectricFan.getFanTypes(4));
 			break;
 		}
+		
+		System.out.println("");
 	}
 }

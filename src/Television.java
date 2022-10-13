@@ -85,4 +85,11 @@ public class Television extends Appliance {
 		super.setIsTurnedOn(false);
 		System.out.println("The Television is turned off.");
 	}
+	
+	@Override
+	public void DisplayInformation() {
+		System.out.println("\nTV Model: " + super.getModel());
+		System.out.println("TV Voltage: " + super.getVoltage());
+		System.out.println("TV Wattage: " + super.getWattage());
+	}
 }

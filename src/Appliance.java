@@ -75,8 +75,12 @@ public class Appliance {
 	}
 
 	public void TurnOn() {
+		if(isPluggedIn){
 		this.isTurnedOn = true;
 		System.out.println("The appliance is turned on.");
+		}else{
+		System.out.println("The appliance must be plugged in.");
+		}
 	}
 
 	public void TurnOff(double hours) {

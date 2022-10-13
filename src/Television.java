@@ -54,4 +54,26 @@ public class Television extends Appliance {
 		this.volume -= 1;
 		System.out.println("Volume is decreased by " + this.volume);
 	}
+	@Override
+	public void PlugIn() {
+		super.setIsPluggedIn(true);
+		System.out.println("The Television is plugged in.");
+	}
+	@Override
+	public void PlugOut() {
+		super.setIsPluggedIn(false);
+		System.out.println("The Televisio is plugged out.");
+	}
+	@Override
+	public void TurnOn() {
+		super.setIsTurnedOn(true);
+		System.out.println("The Television is turned on.");
+	}
+	@Override
+	public void TurnOff(double hours) {
+		this.ComputeConsumption(hours);
+		System.out.println("Total Consumption: " + super.getConsumption());
+		super.setIsTurnedOn(false);
+		System.out.println("The Television is turned off.");
+	}
 }

@@ -43,26 +43,35 @@ public class ElectricFan extends Appliance {
 	}
 
 	public void ChangeFanSpeed(int fanSpeed) {
-		if (fanSpeed > fanMaxSpeed) {
-			System.out.println("Max speed is only " + this.fanMaxSpeed);
+		if (super.getIsTurnedOn()) {
+			if (fanSpeed > fanMaxSpeed) {
+				System.out.println("Max speed is only " + this.fanMaxSpeed);
+			} else {
+				this.fanSpeed = fanSpeed;
+				System.out.println("Fan speed is changed to " + this.fanSpeed);
+			}
 		} else {
-			this.fanSpeed = fanSpeed;
-			System.out.println("Fan speed is changed to " + this.fanSpeed);
+			System.out.println("The Television must be turned on.");
 		}
 	}
 
 	public void ChangeFanMaxSpeed() {
-		System.out.println("Set the max speed of your fan: ");
-		try {
-			this.fanMaxSpeed = Integer.parseInt(in.readLine());
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (super.getIsTurnedOn()) {
+			System.out.println("Set the max speed of your fan: ");
+			try {
+				this.fanMaxSpeed = Integer.parseInt(in.readLine());
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Max speed is set to " + this.fanMaxSpeed);
+		} else {
+			System.out.println("The Television must be turned on.");
 		}
-		System.out.println("Max speed is set to " + this.fanMaxSpeed);
+
 	}
 	
 	public void SwivelOn() {

@@ -42,22 +42,23 @@ public class Appliance {
 	}
 	
 	public void PlugIn() {
-		this.isPluggedIn = true;		
+		this.isPluggedIn = true;
+		System.out.println("The appliance is pluged in.");
 	}
 	public void PlugOut() {
 		this.isPluggedIn = false;
+		System.out.println("The appliance is pluged out.");
 	}
 	
 	public void TurnOn() {
-		this.isPluggedIn = true;
-		System.out.println("The appliance is plugged in.");
+		System.out.println("The appliance is turned on.");
 	}
 	
 	public void TurnOff(double hours) {
 		this.ComputeConsumption(hours);
 		System.out.println("Total Consumption: "+ComputeConsumption(hours));
 		this.isPluggedIn = false;
-		System.out.println("The appliance is plugged out.");
+		System.out.println("The appliance is turned off.");
 	}
 	
 	public double ComputeConsumption(double hours) {

@@ -110,6 +110,7 @@ public class Main {
 				
 		while (true) {
 
+		while (true) {
 			objTelevision.DisplayInformation();
 			System.out.println("\nTelevision controls: ");
 			System.out.println("1) Move Channel Up");
@@ -127,10 +128,12 @@ public class Main {
 			System.out.println("\nElectric Fan controls: ");
 			System.out.println("10) Change Speed");
 			System.out.println("11) Change Max Speed");
-			System.out.println("12) Turn on");
-			System.out.println("13) Turn off");
-			System.out.println("14) Plug in");
-			System.out.println("15) Plug off");
+			System.out.println("12) Swivel Turn On");
+			System.out.println("13) Swivel Turn Off");
+			System.out.println("14) Turn on");
+			System.out.println("15) Turn off");
+			System.out.println("16) Plug in");
+			System.out.println("17) Plug off");
 
 			System.out.print("\nEnter your input: ");
 			int command = Integer.parseInt(in.readLine());
@@ -174,19 +177,32 @@ public class Main {
 				break;
 			case 11:
 				objElectricFan.ChangeFanMaxSpeed();
-				break;
+				break;			
 			case 12:
+				if(objElectricFan.getSwiveled() == false) {
+					objElectricFan.SwivelOn();
+					objElectricFan.setSwiveled(true);
+					break;
+				} else System.out.println("Swivel is already on.");
+
+			case 13:
+				if(objElectricFan.getSwiveled() == true) {
+					objElectricFan.SwivelOff();
+					objElectricFan.setSwiveled(false);
+					break;
+				} else System.out.println("Swivel is already off.");
+			case 14:
 				objElectricFan.TurnOn();
 				break;
-			case 13:
+			case 15:
 				System.out.print("Enter the number of hours used: ");
 				double fanHoursUsed = Double.parseDouble(in.readLine());
 				objElectricFan.TurnOff(fanHoursUsed);
 				break;
-			case 14:
+			case 16:
 				objElectricFan.PlugIn();
 				break;
-			case 15:
+			case 17:
 				objElectricFan.PlugOut();
 				break;
 			}

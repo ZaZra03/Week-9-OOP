@@ -51,6 +51,18 @@ public class Appliance {
 	public void setIsPluggedIn(boolean isPluggedIn) {
 		this.isPluggedIn = isPluggedIn;
 	}
+	
+	public boolean getIsTurnedOn() {
+		return isTurnedOn;
+	}
+
+	public void setIsTurnedOn(boolean isTurnedOn) {
+		this.isTurnedOn = isTurnedOn;
+	}
+
+	public double getConsumption() {
+		return consumption;
+	}
 
 	public void PlugIn() {
 		this.isPluggedIn = true;

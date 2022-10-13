@@ -101,7 +101,7 @@ public class ElectricFan extends Appliance {
 
 	@Override
 	public void TurnOff(double hours) {
-		this.ComputeConsumption(hours);
+		super.ComputeConsumption(hours);
 		System.out.println("Total Consumption: " + super.getConsumption());
 		super.setIsTurnedOn(false);
 		System.out.println("The Electric Fan is turned off.");

@@ -24,28 +24,12 @@ public class Appliance {
 		return model;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
-	}
-
 	public int getVoltage() {
 		return voltage;
 	}
 
-	public void setVoltage(int voltage) {
-		this.voltage = voltage;
-	}
-
 	public double getWattage() {
 		return wattage;
-	}
-
-	public void setWattage(double wattage) {
-		this.wattage = wattage;
-	}
-
-	public boolean getIsPluggedIn() {
-		return isPluggedIn;
 	}
 
 	public void setIsPluggedIn(boolean isPluggedIn) {
@@ -75,12 +59,8 @@ public class Appliance {
 	}
 
 	public void TurnOn() {
-		if (isPluggedIn) {
-			this.isTurnedOn = true;
-			System.out.println("The appliance is turned on.");
-		} else {
-			System.out.println("The appliance must be plugged in.");
-		}
+		this.isTurnedOn = true;
+		System.out.println("The appliance is turned on.");
 	}
 
 	public void TurnOff(double hours) {

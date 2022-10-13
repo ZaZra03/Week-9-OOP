@@ -8,51 +8,55 @@ public class Television extends Appliance {
 		this.volume = 10;
 	}
 
-	public int getChannel() {
-		return channel;
-	}
-
-	public void setChannel(int channel) {
-		this.channel = channel;
-	}
-
-	public int getVolume() {
-		return volume;
-	}
-
-	public void setVolume(int volume) {
-		this.volume = volume;
-	}
-
-	public void MoveChannelUp() {
-		if (this.channel > 0) {
-			this.channel += 1;
-			System.out.println("Channel is moved to Channel " + this.channel);
+		public void MoveChannelUp() {
+		if (super.getIsTurnedOn()) {
+			if (this.channel > 0) {
+				this.channel += 1;
+				System.out.println("Channel is moved to Channel " + this.channel);
+			}
+		} else {
+			System.out.println("The Television must be turned on.");
 		}
 	}
 
 	public void MoveChannelDown() {
-		if (this.channel > 0) {
-			this.channel -= 1;
-			System.out.println("Channel is moved to Channel " + this.channel);
+		if (super.getIsTurnedOn()) {
+			if (this.channel > 0) {
+				this.channel -= 1;
+				System.out.println("Channel is moved to Channel " + this.channel);
+			}
+		} else {
+			System.out.println("The Television must be turned on.");
 		}
 	}
 
 	public void MoveChannelAt(int channel) {
-		if (channel > 0) {
-			this.channel = channel;
-			System.out.println("Channel is moved to Channel " + channel);
+		if (super.getIsTurnedOn()) {
+			if (channel > 0) {
+				this.channel = channel;
+				System.out.println("Channel is moved to Channel " + channel);
+			}
+		} else {
+			System.out.println("The Television must be turned on.");
 		}
 	}
 
 	public void IncreaseVolume() {
-		this.volume += 1;
-		System.out.println("Volume is increased by " + this.volume);
+		if (super.getIsTurnedOn()) {
+			this.volume += 1;
+			System.out.println("Volume is increased by " + this.volume);
+		} else {
+			System.out.println("The Television must be turned on.");
+		}
 	}
 
 	public void DecreaseVolume() {
-		this.volume -= 1;
-		System.out.println("Volume is decreased by " + this.volume);
+		if (super.getIsTurnedOn()) {
+			this.volume -= 1;
+			System.out.println("Volume is decreased by " + this.volume);
+		} else {
+			System.out.println("The Television must be turned on.");
+		}
 	}
 
 	@Override

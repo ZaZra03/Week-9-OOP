@@ -78,10 +78,25 @@ public class ElectricFan extends Appliance {
 	}
 
 	@Override
-	public void TurnOn() {
-		if (this.fanMaxSpeed == 0) {
-			this.ChangeFanMaxSpeed();
-		}
+	public void PlugIn() {
+		super.setIsPluggedIn(true);
+		System.out.println("The Electric Fan is plugged in.");
 	}
-
+	@Override
+	public void PlugOut() {
+		super.setIsPluggedIn(false);
+		System.out.println("The Electric Fan is plugged out.");
+	}
+	@Override
+	public void TurnOn() {
+		super.setIsTurnedOn(true);
+		System.out.println("The Electric Fan is turned on.");
+	}
+	@Override
+	public void TurnOff(double hours) {
+		this.ComputeConsumption(hours);
+		System.out.println("Total Consumption: " + super.getConsumption());
+		super.setIsTurnedOn(false);
+		System.out.println("The Electric Fan is turned off.");
+	}
 }

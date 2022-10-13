@@ -44,12 +44,14 @@ public class Appliance {
 	
 	public void TurnOn() {
 		this.isPluggedIn = true;
-		System.out.println("The appliance is plugged out.");
+		System.out.println("The appliance is plugged in.");
 	}
 	
-	public void TurnOff() {
+	public void TurnOff(double hours) {
+		this.ComputeConsumption(hours);
+		System.out.println("Total Consumption: "+ComputeConsumption(hours));
 		this.isPluggedIn = false;
-		System.out.println("The appliance is plugged in.");
+		System.out.println("The appliance is plugged out.");
 	}
 	
 	public double ComputeConsumption(double hours) {

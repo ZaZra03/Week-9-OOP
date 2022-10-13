@@ -160,7 +160,9 @@ public class Main {
 				objTelevision.TurnOn();
 				break;
 			case 7:
-				objTelevision.TurnOff();
+				System.out.print("Enter the number of hours used: ");
+				double tvhoursUse =Double.parseDouble(in.readLine());
+				objTelevision.TurnOff(tvhoursUse);
 				break;
 			case 8:
 				objTelevision.TurnOn();
@@ -180,7 +182,9 @@ public class Main {
 				objElectricFan.TurnOn();
 				break;
 			case 13:
-				objElectricFan.TurnOff();
+				System.out.print("Enter the number of hours used: ");
+				double fanhoursUse =Double.parseDouble(in.readLine());
+				objElectricFan.TurnOff(fanhoursUse);
 				break;
 			}
 		}

@@ -37,7 +37,5 @@ public class Main {
 		case 1:
 			objElectricFan.setFanType(objElectricFan.getFanTypes(0));
 		}
-		
 	}
-
 }

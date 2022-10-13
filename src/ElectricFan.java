@@ -82,16 +82,19 @@ public class ElectricFan extends Appliance {
 		super.setIsPluggedIn(true);
 		System.out.println("The Electric Fan is plugged in.");
 	}
+
 	@Override
 	public void PlugOut() {
 		super.setIsPluggedIn(false);
 		System.out.println("The Electric Fan is plugged out.");
 	}
+
 	@Override
 	public void TurnOn() {
 		super.setIsTurnedOn(true);
 		System.out.println("The Electric Fan is turned on.");
 	}
+
 	@Override
 	public void TurnOff(double hours) {
 		this.ComputeConsumption(hours);

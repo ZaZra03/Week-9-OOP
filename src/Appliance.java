@@ -43,11 +43,11 @@ public class Appliance {
 	
 	public void PlugIn() {
 		this.isPluggedIn = true;
-		System.out.println("The appliance is pluged in.");
+		System.out.println("The appliance is plugged in.");
 	}
 	public void PlugOut() {
 		this.isPluggedIn = false;
-		System.out.println("The appliance is pluged out.");
+		System.out.println("The appliance is plugged out.");
 	}
 	
 	public void TurnOn() {

@@ -54,7 +54,7 @@ public class ElectricFan extends Appliance {
 		return fanTypes[index];
 	}
 
-	public void ChangeSpeed(int fanSpeed) {
+	public void ChangeFanSpeed(int fanSpeed) {
 		if (fanSpeed > fanMaxSpeed) {
 			System.out.println("Max speed is only " + this.fanMaxSpeed);
 		} else {

@@ -20,19 +20,20 @@ public class Main {
 		String modelElectricFan = in.readLine();
 		System.out.print("Type your Electric Fan's voltage: ");
 		String voltageElectricFan = in.readLine();
-		System.out.print("Type your Electric Fan's wattage");
+		System.out.print("Type your Electric Fan's wattage: ");
 		double wattageElectricFan = Double.parseDouble(in.readLine());
 		ElectricFan objElectricFan = new ElectricFan(modelElectricFan,voltageElectricFan,wattageElectricFan);
 		
-		System.out.println("\nSelect your Electric Fan's type: ");
+		System.out.print("\nSelect your Electric Fan's type: ");
 		System.out.println("1) Desk");
 		System.out.println("2) Stand");
 		System.out.println("3) Wall");
 		System.out.println("4) Ceiling");
 		System.out.println("5) Clip");
-	
-		
+		System.out.print("Enter your input: ");	
 		int typeElectricFan =  Integer.parseInt(in.readLine());
+		
+	
 		switch(typeElectricFan) {
 		case 1:
 			objElectricFan.setFanType(objElectricFan.getFanTypes(0));

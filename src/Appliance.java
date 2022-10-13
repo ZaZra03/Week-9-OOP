@@ -84,7 +84,7 @@ public class Appliance {
 	}
 
 	public void TurnOff(double hours) {
-		super.ComputeConsumption(hours);
+		this.ComputeConsumption(hours);
 		System.out.println("Total Consumption: " + this.consumption);
 		this.isTurnedOn = false;
 		System.out.println("The appliance is turned off.");

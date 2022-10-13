@@ -5,6 +5,7 @@ public class Appliance {
 	private double wattage;
 	private boolean isPluggedIn;
 	private boolean isTurnedOn;
+	private double consumption;
 	
 	public Appliance() {
 		
@@ -16,6 +17,7 @@ public class Appliance {
 		this.wattage = wattage;
 		this.isPluggedIn = false;
 		this.isTurnedOn = false;
+		this.consumption = 0;
 	}
 	
 	public String getModel() {
@@ -59,13 +61,12 @@ public class Appliance {
 	
 	public void TurnOff(double hours) {
 		this.ComputeConsumption(hours);
-		System.out.println("Total Consumption: "+ComputeConsumption(hours));
+		System.out.println("Total Consumption: "+this.consumption);
 		this.isTurnedOn = false;
 		System.out.println("The appliance is turned off.");
 	}
 	
-	public double ComputeConsumption(double hours) {
-		double consumption = hours*this.wattage;
-		return consumption;
+	public void ComputeConsumption(double hours) {
+		this.consumption = hours*this.wattage;
 	}
 }

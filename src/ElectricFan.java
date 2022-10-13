@@ -106,4 +106,11 @@ public class ElectricFan extends Appliance {
 		super.setIsTurnedOn(false);
 		System.out.println("The Electric Fan is turned off.");
 	}
+	
+	@Override
+	public void DisplayInformation() {
+		System.out.println("\nElectric Fan Model: " + super.getModel());
+		System.out.println("Electric Fan Voltage: " + super.getVoltage());
+		System.out.println("Electric Fan Wattage: " + super.getWattage());
+	}
 }

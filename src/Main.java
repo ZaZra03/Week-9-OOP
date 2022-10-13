@@ -173,7 +173,7 @@ public class Main {
 			case 10:
 				System.out.print("Enter fan speed: ");
 				int fanSpeed = Integer.parseInt(in.readLine());
-				objElectricFan.ChangeSpeed(fanSpeed);
+				objElectricFan.ChangeFanSpeed(fanSpeed);
 				break;
 			case 11:
 				objElectricFan.ChangeFanMaxSpeed();

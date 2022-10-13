@@ -41,6 +41,12 @@ public class Appliance {
 		this.isPluggedIn = isPluggedIn;
 	}
 	
+	public void PlugIn() {
+		this.isPluggedIn = true;		
+	}
+	public void PlugOut() {
+		this.isPluggedIn = false;
+	}
 	
 	public void TurnOn() {
 		this.isPluggedIn = true;

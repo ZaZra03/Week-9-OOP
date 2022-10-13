@@ -161,14 +161,14 @@ public class Main {
 				break;
 			case 7:
 				System.out.print("Enter the number of hours used: ");
-				double tvhoursUse =Double.parseDouble(in.readLine());
-				objTelevision.TurnOff(tvhoursUse);
+				double tvHoursUsed = Double.parseDouble(in.readLine());
+				objTelevision.TurnOff(tvHoursUsed);
 				break;
 			case 8:
-				objTelevision.TurnOn();
+				objTelevision.PlugIn();
 				break;
 			case 9:
-				objTelevision.TurnOn();
+				objTelevision.PlugOut();
 				break;
 			case 10:
 				System.out.print("Enter fan speed: ");
@@ -183,8 +183,14 @@ public class Main {
 				break;
 			case 13:
 				System.out.print("Enter the number of hours used: ");
-				double fanhoursUse =Double.parseDouble(in.readLine());
-				objElectricFan.TurnOff(fanhoursUse);
+				double fanHoursUsed = Double.parseDouble(in.readLine());
+				objElectricFan.TurnOff(fanHoursUsed);
+				break;
+			case 14:
+				objElectricFan.PlugIn();
+				break;
+			case 15:
+				objElectricFan.PlugOut();
 				break;
 			}
 		}

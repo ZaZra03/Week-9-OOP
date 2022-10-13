@@ -80,7 +80,7 @@ public class Main {
 
 		ElectricFan objElectricFan = new ElectricFan(modelElectricFan, voltageElectricFan, wattageElectricFan);
 
-		System.out.print("\nSelect your Electric Fan's type: ");
+		System.out.println("\nSelect your Electric Fan's type: ");
 		System.out.println("1) Desk");
 		System.out.println("2) Stand");
 		System.out.println("3) Wall");

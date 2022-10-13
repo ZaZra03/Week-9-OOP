@@ -107,6 +107,95 @@ public class Main {
 			break;
 		}
 
-		System.out.println("");
+				
+		while(true) {
+			
+			System.out.println("\nTV Model: ");
+			System.out.println("TV Voltage: ");
+			System.out.println("TV Wattage: ");
+			System.out.println("\nTelevision controls: ");
+			System.out.println("\n1) Move Channel Up");
+			System.out.println("2) Move Channel Down");
+			System.out.println("3) Change Channel At");
+			System.out.println("4) Increase Volume");
+			System.out.println("5) Decrease Volume");
+			System.out.println("6) Turn on");
+			System.out.println("7) Turn off");
+			System.out.println("8) Plug in");
+			System.out.println("9) Plug off");		
+			
+			System.out.println("\nElectric Fan Model: ");
+			System.out.println("Electric Fan Voltage: ");
+			System.out.println("Electric Fan Wattage: ");
+			System.out.println("\nElectric Fan controls: ");
+			System.out.println("\n10) Change Speed");
+			System.out.println("11) Change Max Speed");
+			System.out.println("12) Turn on");
+			System.out.println("13) Turn off");
+			System.out.println("14) Plug in");
+			System.out.println("15) Plug off");
+			
+			System.out.print("\nEnter your input: ");	
+			int command =  Integer.parseInt(in.readLine());
+			
+			switch(command) {
+				 case 1:
+					objTelevision.MoveChannelUp();
+				 	break;
+				 	
+				 case 2:
+					objTelevision.MoveChannelDown();
+				 	break;
+				 	
+				 case 3:
+					System.out.print("Enter a channel: ");
+					int channel = Integer.parseInt(in.readLine());
+					objTelevision.MoveChannelAt(channel);
+				 	break;
+				 	
+				 case 4:
+					objTelevision.IncreaseVolume();
+				 	break;
+				 	
+				 case 5:
+					objTelevision.DecreaseVolume();
+				 	break;
+				 	
+				 case 6:
+					objTelevision.TurnOn();
+				 	break;
+				 	
+				 case 7:
+					objTelevision.TurnOff();
+				 	break;	
+				 	
+				 
+				 case 8:
+					objTelevision.TurnOn();
+				 	break;
+				 	
+				 case 9:
+					objTelevision.TurnOn();
+				 	break;	
+				 		 	
+				 case 10:
+					System.out.print("Enter fan speed: ");
+					int fanSpeed = Integer.parseInt(in.readLine());
+					objElectricFan.ChangeSpeed(fanSpeed);
+				 	break;
+				 	
+				 case 11:
+					objElectricFan.ChangeFanMaxSpeed();
+				 	break;
+				 	
+				 case 12:
+					objElectricFan.TurnOn();
+					break;
+					
+				 case 13:
+					objElectricFan.TurnOff();
+					break;
+			}
+		}
 	}
 }

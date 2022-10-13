@@ -110,11 +110,9 @@ public class Main {
 				
 		while (true) {
 
-			System.out.println("\nTV Model: ");
-			System.out.println("TV Voltage: ");
-			System.out.println("TV Wattage: ");
+			objTelevision.DisplayInformation();
 			System.out.println("\nTelevision controls: ");
-			System.out.println("\n1) Move Channel Up");
+			System.out.println("1) Move Channel Up");
 			System.out.println("2) Move Channel Down");
 			System.out.println("3) Change Channel At");
 			System.out.println("4) Increase Volume");
@@ -124,11 +122,10 @@ public class Main {
 			System.out.println("8) Plug in");
 			System.out.println("9) Plug off");
 
-			System.out.println("\nElectric Fan Model: ");
-			System.out.println("Electric Fan Voltage: ");
-			System.out.println("Electric Fan Wattage: ");
+			objElectricFan.DisplayInformation();
+			System.out.println("Fan Type: " + objElectricFan.getFanType());
 			System.out.println("\nElectric Fan controls: ");
-			System.out.println("\n10) Change Speed");
+			System.out.println("10) Change Speed");
 			System.out.println("11) Change Max Speed");
 			System.out.println("12) Turn on");
 			System.out.println("13) Turn off");

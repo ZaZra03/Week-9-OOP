@@ -15,16 +15,16 @@ public class Main {
 		double wattageTV= Double.parseDouble(in.readLine());
 		Television objTelevision = new Television(modelTV,voltageTV,wattageTV);
 		
-		System.out.println("Create your Electric Fan.");
-		System.out.println("Type your Electric Fan's model: ");
+		System.out.println("\nCreate your Electric Fan.");
+		System.out.print("Type your Electric Fan's model: ");
 		String modelElectricFan = in.readLine();
-		System.out.println("Type your Electric Fan's voltage: ");
+		System.out.print("Type your Electric Fan's voltage: ");
 		String voltageElectricFan = in.readLine();
-		System.out.println("Type your Electric Fan's wattage");
+		System.out.print("Type your Electric Fan's wattage");
 		double wattageElectricFan = Double.parseDouble(in.readLine());
 		ElectricFan objElectricFan = new ElectricFan(modelElectricFan,voltageElectricFan,wattageElectricFan);
 		
-		System.out.println("Select your Electric Fan's type: ");
+		System.out.println("\nSelect your Electric Fan's type: ");
 		System.out.println("1) Desk");
 		System.out.println("2) Stand");
 		System.out.println("3) Wall");
@@ -36,6 +36,21 @@ public class Main {
 		switch(typeElectricFan) {
 		case 1:
 			objElectricFan.setFanType(objElectricFan.getFanTypes(0));
+			break;
+			
+		case 2:
+			objElectricFan.setFanType(objElectricFan.getFanTypes(1));
+			break;
+		case 3:
+			objElectricFan.setFanType(objElectricFan.getFanTypes(2));
+			break;
+		case 4:
+			objElectricFan.setFanType(objElectricFan.getFanTypes(3));
+			break;
+		
+		case 5:
+			objElectricFan.setFanType(objElectricFan.getFanTypes(4));
+			break;
 		}
 	}
 }

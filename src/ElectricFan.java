@@ -91,8 +91,12 @@ public class ElectricFan extends Appliance {
 
 	@Override
 	public void TurnOn() {
+		if(super.getIsPluggedIn){
 		super.setIsTurnedOn(true);
 		System.out.println("The Electric Fan is turned on.");
+		}else{
+		System.out.println("The Electric Fan must be plugged in.");	
+		}
 	}
 
 	@Override

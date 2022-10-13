@@ -34,10 +34,10 @@ public class Appliance {
 	public void setWattage(double wattage) {
 		this.wattage = wattage;
 	}
-	public boolean isPluggedIn() {
+	public boolean getIsPluggedIn() {
 		return isPluggedIn;
 	}
-	public void setPluggedIn(boolean isPluggedIn) {
+	public void setIsPluggedIn(boolean isPluggedIn) {
 		this.isPluggedIn = isPluggedIn;
 	}
 	

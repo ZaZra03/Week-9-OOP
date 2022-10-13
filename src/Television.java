@@ -1,4 +1,3 @@
-
 public class Television extends Appliance {
 	private int channel;
 	private int volume;
@@ -26,16 +25,23 @@ public class Television extends Appliance {
 	}
 
 	public void MoveChannelUp() {
-		if (channel > 0) {
+		if (this.channel > 0) {
 			this.channel += 1;
 			System.out.println("Channel is moved to Channel " + this.channel);
 		}
 	}
 
 	public void MoveChannelDown() {
-		if (channel > 0) {
+		if (this.channel > 0) {
 			this.channel -= 1;
 			System.out.println("Channel is moved to Channel " + this.channel);
+		}
+	}
+	
+	public void MoveChannelAt(int channel) {
+		if(channel > 0) {
+			this.channel = channel;
+			System.out.println("Channel is moved to Channel " + channel);
 		}
 	}
 

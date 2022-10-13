@@ -93,4 +93,10 @@ public class Appliance {
 	public void ComputeConsumption(double hours) {
 		this.consumption = hours * this.wattage;
 	}
+	
+	public void DisplayInformation() {
+		System.out.println("TV Model: " + this.model);
+		System.out.println("TV Voltage: " + this.voltage);
+		System.out.println("TV Wattage: " + this.wattage);
+	}
 }

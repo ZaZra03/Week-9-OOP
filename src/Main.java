@@ -138,7 +138,7 @@ public class Main {
 			System.out.print("\nEnter your input: ");	
 			int command =  Integer.parseInt(in.readLine());
 			
-			switch(command) {
+				switch(command) {
 				 case 1:
 					objTelevision.MoveChannelUp();
 				 	break;
@@ -166,7 +166,9 @@ public class Main {
 				 	break;
 				 	
 				 case 7:
-					objTelevision.TurnOff();
+					System.out.print("Enter the number of hours used: ");
+					double tvhoursUse =Double.parseDouble(in.readLine());
+					objTelevision.TurnOff(tvhoursUse);
 				 	break;	
 				 	
 				 
@@ -193,7 +195,9 @@ public class Main {
 					break;
 					
 				 case 13:
-					objElectricFan.TurnOff();
+					System.out.print("Enter the number of hours used: ");
+					double fanhoursUse =Double.parseDouble(in.readLine());
+					objElectricFan.TurnOff(fanhoursUse);
 					break;
 			}
 		}

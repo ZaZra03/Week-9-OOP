@@ -109,8 +109,6 @@ public class Main {
 
 				
 		while (true) {
-
-		while (true) {
 			objTelevision.DisplayInformation();
 			System.out.println("\nTelevision controls: ");
 			System.out.println("1) Move Channel Up");

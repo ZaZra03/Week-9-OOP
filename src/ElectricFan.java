@@ -18,24 +18,12 @@ public class ElectricFan extends Appliance {
 		this.isSwiveled = false;
 	}
 
-	public int getFanSpeed() {
-		return fanSpeed;
-	}
-
 	public void setFanSpeed(int fanSpeed) {
 		this.fanSpeed = fanSpeed;
 	}
 
-//	public int getFanMaxSpeed() {
-//		return fanMaxSpeed;
-//	}
-//
-//	public void setFanMaxSpeed(int fanMaxSpeed) {
-//		this.fanMaxSpeed = fanMaxSpeed;
-//	}
-
-	public boolean isSwiveled() {
-		return isSwiveled;
+	public boolean getSwiveled() {
+		return this.isSwiveled;
 	}
 
 	public void setSwiveled(boolean isSwiveled) {
@@ -76,32 +64,33 @@ public class ElectricFan extends Appliance {
 		}
 		System.out.println("Max speed is set to " + this.fanMaxSpeed);
 	}
+	
+	public void SwivelOn() {
+		System.out.println("Swivel is On.");
+	}
+	
+	public void SwivelOff() {
+		System.out.println("Swivel is Off.");
+	}
 
 	@Override
 	public void PlugIn() {
 		super.setIsPluggedIn(true);
 		System.out.println("The Electric Fan is plugged in.");
 	}
-
 	@Override
 	public void PlugOut() {
 		super.setIsPluggedIn(false);
 		System.out.println("The Electric Fan is plugged out.");
 	}
-
 	@Override
 	public void TurnOn() {
-		if(super.getIsPluggedIn()){
 		super.setIsTurnedOn(true);
 		System.out.println("The Electric Fan is turned on.");
-		}else{
-		System.out.println("The Electric Fan must be plugged in.");	
-		}
 	}
-
 	@Override
 	public void TurnOff(double hours) {
-		super.ComputeConsumption(hours);
+		this.ComputeConsumption(hours);
 		System.out.println("Total Consumption: " + super.getConsumption());
 		super.setIsTurnedOn(false);
 		System.out.println("The Electric Fan is turned off.");

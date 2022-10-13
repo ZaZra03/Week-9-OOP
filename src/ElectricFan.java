@@ -51,7 +51,7 @@ public class ElectricFan extends Appliance {
 				System.out.println("Fan speed is changed to " + this.fanSpeed);
 			}
 		} else {
-			System.out.println("The Television must be turned on.");
+			System.out.println("The electric fan must be turned on.");
 		}
 	}
 
@@ -69,7 +69,7 @@ public class ElectricFan extends Appliance {
 			}
 			System.out.println("Max speed is set to " + this.fanMaxSpeed);
 		} else {
-			System.out.println("The Television must be turned on.");
+			System.out.println("The electric fan must be turned on.");
 		}
 
 	}
